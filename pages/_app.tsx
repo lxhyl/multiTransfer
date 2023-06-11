@@ -7,6 +7,7 @@ import { WagmiConfig, configureChains, createConfig } from 'wagmi'
 import { mainnet, polygon, arbitrum, goerli } from 'wagmi/chains'
 import { publicProvider } from 'wagmi/providers/public'
 import { MetaMaskConnector } from 'wagmi/connectors/metaMask'
+import { Analytics } from '@vercel/analytics/react'
 
 const { chains, publicClient } = configureChains(
   [polygon, arbitrum, mainnet, goerli],
@@ -35,5 +36,6 @@ export default function App({ Component, pageProps }: AppProps) {
         <Component {...pageProps} />
       </WagmiConfig>
     </GeistProvider>
+    <Analytics />
   </>
 }

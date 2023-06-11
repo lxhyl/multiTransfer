@@ -19,7 +19,6 @@ export default function Document() {
       <body className='flex flex-col'>
         <Main />
         <NextScript />
-        <Analytics />
       </body>
     </Html>
   )
